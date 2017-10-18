@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# coding: iso-8859-1
+
 from encode import encode_msg, encode_phn
 from send_message import send_message
 
@@ -22,6 +25,6 @@ import urllib2
 
 phone = encode_phn('3704713781')
 message = encode_msg('a')
-send_message(phone,message)
-#send_message('+543704713781','a')
+#send_message(phone,message)
+send_message('+543704713781','á')
 
