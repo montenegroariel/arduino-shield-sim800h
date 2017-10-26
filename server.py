@@ -8,7 +8,7 @@ class GetHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         parsed_path = urlparse.urlparse(self.path)
 	phone, number, temperature =  parsed_path.query.split(":")
-	message = "El equipo Nro " + number + " ha superado su limite de temperatura registrando " + temperature + ". Por favor verifique su funcionamiento."
+	message = "El equipo Nro " + number + " ha superado su limite de temperatura registrando " + temperature + " grados. Por favor verifique su funcionamiento."
 	send_message(phone,message)
         self.end_headers()
         return
